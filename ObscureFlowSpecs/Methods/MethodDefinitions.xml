@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="android.content">
+	<method name="IntentFilter" class="IntentFilter">
+		<version id="1">
+			<parameter>java.lang.String
+			</parameter>
+		</version>
+	</method>
+	<method name="sendBroadcast" class="Context">
+		<version id="1">
+			<parameter>android.content.Intent
+			</parameter>
+		</version>
+	</method>
+	<method name="onReceive" class="BroadcastReceiver" />
+	<method name="setAction" class="Intent" />
+	<method name="registerReceiver" class="ContextWrapper">
+		<version id="1">
+			<parameter>android.content.Context
+			</parameter>
+			<parameter>android.content.Intent
+			</parameter>
+		</version>
+	</method>
+	<method name="startActivity" class="Context" >
+	    <version id="1">
+			<parameter>android.content.Intent
+			</parameter>
+		</version>
+		 <version id="2">
+			<parameter>android.content.Intent
+			</parameter>
+			<parameter>android.os.Bundle
+			</parameter>
+		</version>
+	</method>
+	<method name="Intent" class="Intent">
+		<version id="1">
+			<parameter>android.content.Context
+			</parameter>
+			<parameter>java.lang.class
+			</parameter>
+		</version>
+		<version id="2">
+			<parameter>java.lang.String
+			</parameter>
+			<parameter>android.net.Uri
+			</parameter>
+			<parameter>android.content.Context
+			</parameter>
+			<parameter>java.lang.class
+			</parameter>
+		</version>
+		<version id="3">
+			<parameter>java.lang.String
+			</parameter>
+		</version>
+	</method>
+	<method name="setClassName" class="Intent" />
+</package>
+<package name="android.os">
+    <method name="sendMessage" class="Handler" />
+    <method name="handleMessage" class="Handler" />
+</package>
+<package name="android.app">
+    <lifecycle name="activityLifeCycle" class="Activity" >
+        <method name="onCreate" />
+	    <method name="onStart" />
+	    <method name="onRestoreInstanceState" />
+	    <method name="onPostCreate" />
+	    <method name="onSaveInstanceState" />
+	    <method name="onResume" />
+	    <method name="onPostResume" />
+	    <method name="onPause" />
+	    <method name="onStop" />
+	    <method name="onDestroy" />
+    </lifecycle>
+    <lifecycle name="serviceLifeCycle" class="Service" >
+        <method name="onCreate" />
+	    <method name="onStartCommand" />
+    </lifecycle>
+    <lifecycle name="intentServiceLifeCycle" class="Service" >
+        <method name="intentService" />
+	    <method name="onCreate" />
+	    <method name="onHandleIntent" />
+    </lifecycle>
+</package>
+	
+<package>
+    
+</package>
+    <!-- Need to make separate files for each package
+    	    <method name="onCreate" class="Service" />
+	    <method name="onStartCommand" class="Service" />
+	    <method name="onHandleIntent" class="IntentService" />
+	    -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group type="group2">
+	<rule>
+		<vars>
+		    <var name="source" type="invocation" source="android.os.Handler.sendMessage" />
+		    <var name="this" type="invokee" source="#source" />
+			<var name="destMethod" type="method" source="android.os.Handler.handleMessage" containerClass="#this"/>
+			<var name="arg1" type="argument" source="#source" index="0" />
+			<var name="param1" type="parameter" source="#destMethod" index="0" />
+		</vars>
+		<edges>
+			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="#source" to="#destMethod" />
+			<edge type="DATA" tags="Attr.Edge.DATA_FLOW" from="#arg1" to="#param1" />
+		</edges>
+	</rule>
+	<rule>
+		<vars>
+		    <var name="source" type="invocation" source="android.os.Handler.post" />
+		    <var name="this" type="invokee" source="#source" />
+			<var name="destMethod" type="method" source="android.os.Handler.handleMessage" containerClass="#this"/>
+			<var name="arg1" type="argument" source="#source" index="0" />
+			<var name="param1" type="parameter" source="#destMethod" index="0" />
+		</vars>
+		<edges>
+			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="#source" to="#destMethod" />
+			<edge type="DATA" tags="Attr.Edge.DATA_FLOW" from="#arg1" to="#param1" />
+		</edges>
+	</rule>
+</group>

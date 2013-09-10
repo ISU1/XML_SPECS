@@ -1,0 +1,31 @@
+?xml version="1.0" encoding="UTF-8"?>
+<group type="group3">
+	<rule>
+		<vars>
+		    <var name="this" type="invokee" source="java.lang.Thread.start" id="1" />
+		    <var name="srcMethod" type="invocation" source="java.lang.Thread.start" id="1" invokee="#this" />
+			<var name="destMethod" type="method" source="java.lang.Thread.run" containerClass="#this"/>
+		</vars>
+		<edges>
+			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="srcMethod" to="#destMethod" />
+		</edges>
+	</rule>
+	<!-- This rule will cover the below implementation of thread start
+		new Thread(new Runnable() {
+    		public void run() {
+    		//do stuff
+    		}
+    	}).start();
+	 -->
+	<rule>
+		<vars>
+		    <var name="this" type="invokee" source="java.lang.Thread.start" id="1" />
+		    <var name="srcMethod" type="invocation" source="java.lang.Thread.start" id="1" invokee="#this" />
+		    <var name="runnable" type="constructor" source="java.lang.Runnable" containerObject="#this"/>
+			<var name="destMethod" type="method" source="java.lang.Thread.run" containerConstructor="#runnable"/>
+		</vars>
+		<edges>
+			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="srcMethod" to="#destMethod" />
+		</edges>
+	</rule>
+</group>

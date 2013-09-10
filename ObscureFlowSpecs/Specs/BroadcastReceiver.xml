@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group type="group1">
+    <require name="MethodDefinitions.xml"/>
+	<rule>
+		<vars>
+			<var name="srcMethod" type="invocation" source="android.content.ContextWrapper.registerReceiver" id="1" />
+			<var name="destObj" type="argument" source="#srcMethod" index="0" />
+			<var name="destMethod" type="method" source="android.content.BroadcastReceiver.onReceive" containerClass="#destObj" />
+			<var name="arg1" type="argument" source="#srcMethod" index="1" />
+			<var name="param1" type="parameter" source="#destMethod" index="1" />
+		</vars>
+		<edges>
+			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW"  from="#srcMethod" to="#destMethod" />
+			<edge type="DATA" tags="Attr.Edge.DATA_FLOW" from="#arg1" to="#param1" />
+		</edges>
+	</rule>
+	<rule>
+		<vars>
+			<var name="regRcvMethod" type="invocation" source="android.content.ContextWrapper.registerReceiver" id="1" />
+			<var name="reciverObj" type="argument" source="#regRcvMethod" index="0" />
+			<var name="intentFilterObj" type="argument" source="#regRcvMethod" index="1" />
+			<var name="intentFilterConstructor" type="invocation" source="android.content.IntentFilter.IntentFilter" id="1" invokee="#intentFilterObj" />
+			<var name="action1" type="argument" source="#intentFilterConstructor" index="0" />
+			<var name="sendBroadcastInvocation" type="invocation" source="android.content.Context.sendBroadcast" id="1" />
+			<var name="intentObj" type="argument" source="#sendBroadcastInvocation" />
+			<var name="setActionInvocation" type="invocation" source="android.content.Intent.setAction" invokee="#intentObj"/>
+			<var name="action2" type="argument" source="#setActionInvocation" index="0" />
+			<var name="destMethod" type="method" source="android.content.BroadcastReceiver.onReceive" containerClass="#reciverObj" />
+		</vars>
+		<edges>
+			<condition left="#action1" right="#action2">
+				<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="#sendBroadcastInvocation" to="#destMethod" />
+				<edge type="DATA" tags="Attr.Edge.DATA_FLOW" from="#intentObj" to="#reciverObj" />
+			</condition>
+		</edges>
+	</rule>
+</group>
