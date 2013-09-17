@@ -1,4 +1,6 @@
-XML_SPECS
-=========
+XML-based specifications to model and connect obscure flows in Android. 
+=======================================================================
 
-Specs for obscure flows
+Go to to download available specifications.
+Go to wiki-link for detailed explanation on how to write and interpret specifications.
+
