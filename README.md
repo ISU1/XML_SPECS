@@ -5,3 +5,4 @@ Go to download-link to download written specifications.
 
 Go to wiki-link for detailed explanation on how to write and interpret specifications.
 
+[Intents](http://developer.android.com/reference/android/content/Intent.html)
