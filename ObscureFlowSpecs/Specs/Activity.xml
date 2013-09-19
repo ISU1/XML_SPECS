@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group type="group3">
+  <require name="MethodDefinitions.xml"/>
     <rule>
 		<vars>
 		    <var name="intentConstructor" type="invocation" source="android.content.Intent.intent" id="1" />
