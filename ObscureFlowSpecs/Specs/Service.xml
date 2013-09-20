@@ -7,7 +7,7 @@
 		    <var name="class" type="argument" source="#intentConstructor" index="1" />
 		    <var name="intent" type="invokee" source="#intentConstructor" />
 		    <var name="source" type="invocation" source="android.content.Context.startService" argument="#intent"/>
-			<var name="destMethod" type="lifecycle" source="serviceLifeCycle" containerClass="#class"/>"/>
+			<var name="destMethod" type="lifecycle" source="serviceLifeCycle" containerClass="#class"/>
 		</vars>
 		<edges>
 			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="#source" to="#destMethod" />
