@@ -26,7 +26,7 @@
 		    <var name="srcMethod" type="invocation" source="java.lang.Thread.start" id="1" invokee="#this" />
 		    <var name="threadConstructor" type="invocation" source="java.lang.Thread.Thread" id="1" invokee="#this" />
 		    <var name="runnableArg" type="argument" source="#threadConstructor" index="1"/>
-		    <var name="destMethod" type="method" source="java.lang.Thread.run" containerClass="#runnableArg"/>
+		    <var name="destMethod" type="method" source="java.lang.Runnable.run" containerClass="#runnableArg"/>
 		</vars>
 		<edges>
 			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="srcMethod" to="#destMethod" />
