@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group type="group2">
+    <require name="MethodDefinitions.xml"/>
 	<rule>
 		<vars>
 		    <var name="source" type="invocation" source="android.os.AsyncTask.execute" id="1" />
