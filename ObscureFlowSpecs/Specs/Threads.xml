@@ -1,5 +1,6 @@
 ?xml version="1.0" encoding="UTF-8"?>
 <group type="group3">
+    <require name="MethodDefinitions.xml"/>
 	<rule>
 		<vars>
 		    <var name="this" type="invokee" source="java.lang.Thread.start" id="1" />
