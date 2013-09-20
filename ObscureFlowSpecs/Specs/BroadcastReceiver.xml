@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group type="group1">
-    <require name="MethodDefinitions.xml"/>
+  <require name="MethodDefinitions1.xml"/>
+  <require name="MethodDefinitions2.xml"/>
+  <require name="MethodDefinitions3.xml"/>
 	<rule>
 		<vars>
 			<var name="srcMethod" type="invocation" source="android.content.ContextWrapper.registerReceiver" id="1" />

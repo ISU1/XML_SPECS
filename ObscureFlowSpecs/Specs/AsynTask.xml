@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <group type="group2">
-    <require name="MethodDefinitions.xml"/>
+  <require name="MethodDefinitions1.xml"/>
+  <require name="MethodDefinitions2.xml"/>
+  <require name="MethodDefinitions3.xml"/>
 	<rule>
 		<vars>
 		    <var name="source" type="invocation" source="android.os.AsyncTask.execute" id="1" />
