@@ -34,6 +34,7 @@
 			</parameter>
 		</version>
 	</method>
+	 <method name="startService" class="Context" />
 	<method name="Intent" class="Intent">
 		<version id="1">
 			<parameter>android.content.Context
@@ -58,39 +59,3 @@
 	</method>
 	<method name="setClassName" class="Intent" />
 </package>
-<package name="android.os">
-    <method name="sendMessage" class="Handler" />
-    <method name="handleMessage" class="Handler" />
-</package>
-<package name="android.app">
-    <lifecycle name="activityLifeCycle" class="Activity" >
-        <method name="onCreate" />
-	    <method name="onStart" />
-	    <method name="onRestoreInstanceState" />
-	    <method name="onPostCreate" />
-	    <method name="onSaveInstanceState" />
-	    <method name="onResume" />
-	    <method name="onPostResume" />
-	    <method name="onPause" />
-	    <method name="onStop" />
-	    <method name="onDestroy" />
-    </lifecycle>
-    <lifecycle name="serviceLifeCycle" class="Service" >
-        <method name="onCreate" />
-	    <method name="onStartCommand" />
-    </lifecycle>
-    <lifecycle name="intentServiceLifeCycle" class="Service" >
-        <method name="intentService" />
-	    <method name="onCreate" />
-	    <method name="onHandleIntent" />
-    </lifecycle>
-</package>
-	
-<package>
-    
-</package>
-    <!-- Need to make separate files for each package
-    	    <method name="onCreate" class="Service" />
-	    <method name="onStartCommand" class="Service" />
-	    <method name="onHandleIntent" class="IntentService" />
-	    -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="android.os">
+    <method name="sendMessage" class="Handler" />
+    <method name="handleMessage" class="Handler" />
+    <method name="execute" class="AsyncTask">
+	        <version id="1">
+	            <parameter>java.lang.Runnable
+	            </parameter>
+	        </version>
+	    </method>
+	    <method name="execute" class="AsyncTask">
+	        <version id="2">
+	            <parameter>java.lang.Object[]
+	            </parameter>
+	        </version>
+	    </method>
+	    <method name="doInBackground" class="AsyncTask">
+	        <version id="1">
+	            <parameter>java.lang.Object[]
+	            </parameter>
+	        </version>
+	    </method>
+	    <method name="onPostExecute" class="AsyncTask">
+	         <version id="1">
+	            <parameter>java.lang.Object
+	            </parameter>
+	        </version>
+	    </method>
+</package>
