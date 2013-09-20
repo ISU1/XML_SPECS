@@ -5,7 +5,7 @@
 		<vars>
 		    <var name="this" type="invokee" source="java.lang.Thread.start" id="1" />
 		    <var name="srcMethod" type="invocation" source="java.lang.Thread.start" id="1" invokee="#this" />
-			<var name="destMethod" type="method" source="java.lang.Thread.run" containerClass="#this"/>
+		    <var name="destMethod" type="method" source="java.lang.Thread.run" containerClass="#this"/>
 		</vars>
 		<edges>
 			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="srcMethod" to="#destMethod" />
