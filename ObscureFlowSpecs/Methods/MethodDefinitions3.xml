@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package name="android.app">
-    <lifecycle name="activityLifeCycle" class="Activity" >
-        <method name="onCreate" />
-	    <method name="onStart" />
-	    <method name="onRestoreInstanceState" />
-	    <method name="onPostCreate" />
-	    <method name="onSaveInstanceState" />
-	    <method name="onResume" />
-	    <method name="onPostResume" />
-	    <method name="onPause" />
-	    <method name="onStop" />
-	    <method name="onDestroy" />
-    </lifecycle>
-    <lifecycle name="serviceLifeCycle" class="Service" >
-        <method name="onCreate" />
-	    <method name="onStartCommand" />
-    </lifecycle>
-    <lifecycle name="intentServiceLifeCycle" class="Service" >
-        <method name="intentService" />
-	    <method name="onCreate" />
-	    <method name="onHandleIntent" />
-    </lifecycle>
+	<lifecycle name="activityLifeCycle" class="Activity">
+		<method name="onCreate" />
+		<method name="onRestart" />
+		<method name="onStart" />
+		<method name="onRestoreInstanceState" />
+		<method name="onPostCreate" />
+		<method name="onSaveInstanceState" />
+		<method name="onResume" />
+		<method name="onPostResume" />
+		<method name="onPause" />
+		<method name="onStop" />
+		<method name="onDestroy" />
+	</lifecycle>
+	<lifecycle name="serviceLifeCycle" class="Service">
+		<method name="onCreate" />
+		<method name="onStartCommand" />
+	</lifecycle>
+	<lifecycle name="intentServiceLifeCycle" class="Service">
+		<method name="intentService" />
+		<method name="onCreate" />
+		<method name="onHandleIntent" />
+	</lifecycle>
 </package>
