@@ -11,7 +11,7 @@
 			<edge type="CONTROL" tags="Attr.Edge.CONTROL_FLOW" from="srcMethod" to="#destMethod" />
 		</edges>
 	</rule>
-	<!-- This rule will cover the below implementation of thread start
+	<!-- The below rule will handle this implementation of thread start
 		new Thread(new Runnable() {
     		public void run() {
     		//do stuff
